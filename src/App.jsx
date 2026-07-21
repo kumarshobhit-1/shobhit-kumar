@@ -403,7 +403,7 @@ const NotFoundPage = ({
           <nav className={`nav-box ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
             <div className="nav-main-row">
               <div className="logo-box" onClick={navigateToHome} style={{ cursor: 'pointer' }}>
-                <span>shobhit kumar</span>
+                <span>SHOBHIT KUMAR</span>
               </div>
 
               {/* Desktop Nav Items */}
