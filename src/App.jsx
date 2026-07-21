@@ -926,11 +926,11 @@ ${formData.message}
       id: 1,
       title: "The Victory Key (TVK) - Online Learning & Examination Platform",
       category: "Full Stack EdTech Platform",
-      tags: ["Next.js","Firebase","Firestore","Authentication","Admin Dashboard","Online Exams","Premium Content","Cloudinary"],
-      images: ['/1.png','/2.png','/3.png','/4.png','/5.png','/6.png','/7.png','/8.png',],
+      tags: ["Next.js", "Firebase", "Firestore", "Authentication", "Admin Dashboard", "Online Exams", "Premium Content", "Cloudinary"],
+      images: ['/1.png', '/2.png', '/3.png', '/4.png', '/5.png', '/6.png', '/7.png', '/8.png',],
       accentClass: 'hover-blue',
       description: "A scalable EdTech platform built for competitive exam aspirants, offering online mock tests, premium study materials, performance tracking, and role-based administration. Features secure authentication, real-time exam management, result analytics, premium content access, and an optimized Firebase architecture for fast, cost-efficient performance.",
-      tech: ["Next.js","React","Firebase Authentication","Firestore","Cloudinary","Tailwind CSS","JavaScript","Vercel"],
+      tech: ["Next.js", "React", "Firebase Authentication", "Firestore", "Cloudinary", "Tailwind CSS", "JavaScript", "Vercel"],
       link: 'https://thevictorykey.com/',
       githubLink: 'https://github.com/kumarshobhit-1/tvk'
     },
@@ -939,10 +939,10 @@ ${formData.message}
       title: 'Vetwoplay - Media Sharing Platform',
       category: 'Full-Stack Creator Platform',
       tags: 'React - Express - MongoDB - Cloudinary',
-      images: ['/1.1.png','/1.2.png','/1.3.png','/1.4.png','/1.5.png','/1.6.png',],
+      images: ['/1.1.png', '/1.2.png', '/1.3.png', '/1.4.png', '/1.5.png', '/1.6.png',],
       accentClass: 'hover-rose',
       description: 'A creator-first media sharing platform that combines YouTube-style video hosting with tweet-style community posts, playlists, likes, authentication, and a studio dashboard for content management.',
-      tech: ['React', 'Vite', 'Bootstrap', "JavaScript",'Express.js', 'MongoDB', 'Mongoose', 'Cloudinary', 'JWT', 'Axios'],
+      tech: ['React', 'Vite', 'Bootstrap', "JavaScript", 'Express.js', 'MongoDB', 'Mongoose', 'Cloudinary', 'JWT', 'Axios'],
       link: 'https://vetwoplay.vercel.app/',
       githubLink: 'https://github.com/kumarshobhit-1/vetwoplay_frontend'
     },
@@ -951,7 +951,7 @@ ${formData.message}
       title: 'Wanderlust - Full-Stack Vacation Rental Platform',
       category: 'Full Stack MERN Application',
       tags: ["MERN Stack", "Node.js", "Express.js", "MongoDB", "Passport.js", "Cloudinary", "Mapbox", "EJS", "REST API"],
-      images: ['/Project-1-1.png', '/Project-1-2.png','/Project-1-3.png','/Project-1-4.png','/Project-1-5.png','/Project-1-6.png','/Project-1-7.png','/Project-1-8.png'],
+      images: ['/Project-1-1.png', '/Project-1-2.png', '/Project-1-3.png', '/Project-1-4.png', '/Project-1-5.png', '/Project-1-6.png', '/Project-1-7.png', '/Project-1-8.png'],
       accentClass: 'hover-purple',
       description: "A production-ready vacation rental platform inspired by Airbnb, enabling users to explore, create, edit, and manage property listings. Features secure authentication, interactive maps, image uploads, reviews, and responsive UI, delivering a seamless booking and property management experience.",
       tech: ["Node.js", "Express.js", "MongoDB", "EJS", "Passport.js", "HTML5", "JavaScript", "Cloudinary", "Mapbox", "Bootstrap"],
@@ -963,9 +963,9 @@ ${formData.message}
       title: "EpicMint - Web3 Literary NFT Platform",
       category: "Full Stack Web3 Application",
       tags: ["Next.js", "TypeScript", "Firebase", "Web3", "NFT", "MetaMask", "Ethers.js", "Gemini AI"],
-      images: ['/2.1.png','/2.2.png','/2.3.png','/2.4.png','/2.5.png',],
+      images: ['/2.1.png', '/2.2.png', '/2.3.png', '/2.4.png', '/2.5.png',],
       accentClass: "hover-cyan",
-      description:"A decentralized platform where writers can publish AI-assisted stories as NFTs, enabling secure ownership, wallet authentication, NFT minting, and community engagement through a modern Web3-powered user experience.",
+      description: "A decentralized platform where writers can publish AI-assisted stories as NFTs, enabling secure ownership, wallet authentication, NFT minting, and community engagement through a modern Web3-powered user experience.",
       tech: ["Next.js", "React", "JavaScript", "Firebase", "Genkit (Gemini AI)", "Ethers.js", "MetaMask", "Tailwind CSS"],
       link: "https://epicmintminor.vercel.app/",
       githubLink: 'https://github.com/kumarshobhit-1/epicmint'
@@ -975,7 +975,7 @@ ${formData.message}
       title: 'Home Automation - Decentralized Smart Home Relayer System',
       category: 'IoT security platform',
       tags: 'React dashboard - MQTT relayer - Solidity audit trail',
-      images: ['/3.1.png','/3.1.png','/3.1.png',],
+      images: ['/3.1.png', '/3.1.png', '/3.1.png',],
       accentClass: 'hover-cyan',
       description: 'A hybrid Web2/Web3 smart-home dashboard that sends instant MQTT device commands while recording immutable access logs on Ethereum, with live status monitoring, offline handling, and Wokwi-based hardware simulation.',
       tech: ['React', 'Node.js/Express', 'Solidity', 'MQTT', 'Ethers.js', 'Wokwi/ESP32'],
@@ -1011,7 +1011,7 @@ ${formData.message}
     } else if (cleanCmd === 'bio' || cleanCmd === 'cat bio.md') {
       output = `File: bio.md\n-----------------\nName: Shobhit Kumar\nRole: Software Development Engineer (SDE) | Full Stack Developer\nFocus: Designing production-ready web apps, scalable backend systems, and secure REST APIs with a focus on clean architecture.\nStack: JavaScript (ES6+), React.js, Next.js, Node.js, Express.js, MongoDB, Firebase, MySQL, REST APIs, Git & GitHub, Tailwind CSS, Bootstrap.`;
     } else if (cleanCmd === 'stats' || cleanCmd === 'npm run stats') {
-      output = `Running SDE & TVK Production metrics...\n---------------------------------\nActive Users   [████████████████] 1807\nPremium Users  [████████████]     135\nExam Takers    [██████████████]   800\nSuccess Rate   [██████████]       59%\nREST APIs      [███████████████]  40+\nPerformance    [████████████████] +35%`;
+      output = `Running SDE & TVK Production metrics...\n---------------------------------\nActive Users   [████████] 1807\nPremium Users  [██████]   135\nExam Takers    [███████]  800\nSuccess Rate   [█████]    59%\nREST APIs      [████████] 40+\nPerformance    [████████] +35%`;
     } else if (cleanCmd === 'status' || cleanCmd === 'git status') {
       output = `On branch main\nYour branch is up to date with 'origin/main'.\n\nChanges not staged for commit:\n  (use "git add <file>..." to update what will be committed)\n  (use "git restore <file>..." to discard changes in working directory)\n\tmodified:   src/App.jsx (Optimized recruiter sequence & added TVK platform stats)\n\tmodified:   src/App.css (Enhanced Neobrutalist layouts & indicator animation rules)\n\nno changes added to commit (use "git add" and/or "git commit -a")`;
     } else if (cleanCmd === 'projects' || cleanCmd === 'ls') {
@@ -1267,7 +1267,7 @@ ${formData.message}
             <div className="nav-main-row">
               <div className="logo-box" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                 {/* <StarIcon className="logo-star" size={24} /> */}
-                <span>shobhit kumar</span>
+                <span>SHOBHIT KUMAR</span>
               </div>
 
               {/* Desktop Nav Items */}
@@ -1485,23 +1485,7 @@ ${formData.message}
               I design, develop, and maintain production-ready web applications, scalable backend systems, and secure REST APIs with a focus on clean architecture, performance optimization, and exceptional user experience.
             </p>
 
-            {/* CTAs */}
-            <div className="hero-btn-container" style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', alignItems: 'center', marginBottom: '40px', justifyContent: 'flex-start' }}>
-              {/* <button
-                className="brutal-btn"
-                style={{ backgroundColor: 'var(--yellow)', fontSize: '16px', padding: '12px 28px' }}
-                onClick={() => scrollToSection('portfolio-section')}
-              >
-                View My Projects //
-              </button> */}
-              {/* <button
-                className="brutal-btn"
-                style={{ backgroundColor: 'var(--mint)', fontSize: '16px', padding: '12px 28px' }}
-                onClick={() => window.open('#', '_blank')}
-              >
-                Download Resume
-              </button> */}
-            </div>
+
 
             {/* Horizontal Achievement Badges Row */}
             {/* <div className="hero-badges-row" style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', justifyContent: 'flex-start' }}>
