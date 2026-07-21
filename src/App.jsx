@@ -1012,8 +1012,8 @@ ${formData.message}
       output = `File: bio.md\n-----------------\nName: Shobhit Kumar\nRole: Software Development Engineer (SDE) | Full Stack Developer\nFocus: Designing production-ready web apps, scalable backend systems, and secure REST APIs with a focus on clean architecture.\nStack: JavaScript (ES6+), React.js, Next.js, Node.js, Express.js, MongoDB, Firebase, MySQL, REST APIs, Git & GitHub, Tailwind CSS, Bootstrap.`;
     } else if (cleanCmd === 'stats' || cleanCmd === 'npm run stats') {
       output = `Running SDE & TVK Production metrics...\n---------------------------------\nActive Users   [████████] 1807\nPremium Users  [██████]   135\nExam Takers    [███████]  800\nSuccess Rate   [█████]    59%\nREST APIs      [████████] 40+\nPerformance    [████████] +35%`;
-    } else if (cleanCmd === 'status' || cleanCmd === 'git status') {
-      output = `On branch main\nYour branch is up to date with 'origin/main'.\n\nChanges not staged for commit:\n  (use "git add <file>..." to update what will be committed)\n  (use "git restore <file>..." to discard changes in working directory)\n\tmodified:   src/App.jsx (Optimized recruiter sequence & added TVK platform stats)\n\tmodified:   src/App.css (Enhanced Neobrutalist layouts & indicator animation rules)\n\nno changes added to commit (use "git add" and/or "git commit -a")`;
+    } else if (cleanCmd === 'whoami' || cleanCmd === 'about me') {
+      output = `shobhit@dev:~$ whoami\n─────────────────────────────\n👤  Shobhit Kumar\n🎓  B.Tech CSE — Graduation: 2026\n📍  Uttar Pradesh, India\n─────────────────────────────\n💼  Role     : Software Development Engineer\n⚡  Stack    : Full Stack | Web3 | IoT\n🛠  Core     : React · Next.js · Node.js · MongoDB\n               Firebase · Solidity · Express · REST APIs\n🚀  Projects : 5 Production Apps | 1800+ Real Users\n📄  Resume   : kumarshobhit.tech\n📧  Email    : maishobhitkumar@gmail.com\n─────────────────────────────\nAvailable for Internship & Full-Time roles!`;
     } else if (cleanCmd === 'projects' || cleanCmd === 'ls') {
       const listStr = projects.map((p, idx) => `${idx + 1}. ${p.title} [${p.category}]`).join('\n');
       output = `Shobhit's Software Products & Projects:\n---------------------------------\n${listStr}\n\nWhich project would you like to know more about?\nType "project 1", "project 2", ..., or "project ${projects.length}" to get details!`;
@@ -1055,7 +1055,7 @@ ${formData.message}
         output = `Certificate not found. Type "certificates" to see available certificates (1 to ${certificates.length}).`;
       }
     } else if (cleanCmd === 'help') {
-      output = `Available Commands:\n- hi / hello / hey / sup : Send a greeting to Shobhit\n- bye / goodbye / cya   : Say farewell\n- bio / cat bio.md       : Show Shobhit's bio\n- stats / npm run stats   : Renders skill mastery stats\n- status / git status    : Check git repository status\n- projects               : Lists all portfolio projects\n- project <num>          : Shows details of specific project (e.g. "project 1")\n- skills / skill          : Lists all skill categories & badges\n- experience / exp       : Shows professional SDE experience details\n- certificates / certs   : Lists certifications & verify guides\n- verify <num>           : Shows verification info for specific credential\n- clear                  : Clear terminal history\n- help                   : Prints this help message`;
+      output = `Available Commands:\n- hi / hello / hey / sup : Send a greeting to Shobhit\n- bye / goodbye / cya   : Say farewell\n- bio / cat bio.md       : Show Shobhit's bio\n- stats / npm run stats   : Renders skill mastery stats\n- whoami / about me      : Developer profile & contact info\n- projects               : Lists all portfolio projects\n- project <num>          : Shows details of specific project (e.g. "project 1")\n- skills / skill          : Lists all skill categories & badges\n- experience / exp       : Shows professional SDE experience details\n- certificates / certs   : Lists certifications & verify guides\n- verify <num>           : Shows verification info for specific credential\n- clear                  : Clear terminal history\n- help                   : Prints this help message`;
     } else {
       output = `Command not found: "${trimmedCmd}". Type "help" or click one of the preset buttons below to see available inputs.`;
     }
@@ -1809,8 +1809,8 @@ ${formData.message}
             <button className="terminal-preset-btn" onClick={() => executeTerminalCommand('npm run stats')}>
               npm run stats
             </button>
-            <button className="terminal-preset-btn" onClick={() => executeTerminalCommand('git status')}>
-              git status
+            <button className="terminal-preset-btn" onClick={() => executeTerminalCommand('whoami')}>
+              whoami
             </button>
             <button className="terminal-preset-btn" onClick={() => executeTerminalCommand('help')}>
               help
