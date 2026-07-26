@@ -642,6 +642,7 @@ function App() {
   const [isMessageDrawerOpen, setIsMessageDrawerOpen] = useState(false);
   const [activeNav, setActiveNav] = useState('portfolio');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [copiedPkgIdx, setCopiedPkgIdx] = useState(null);
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
 
   useEffect(() => {
@@ -1926,6 +1927,117 @@ ${formData.message}
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Open Source / npm Packages Section ── */}
+      <section id="npm-section" style={{ padding: '80px 0', borderTop: 'var(--border-width) solid var(--border)', backgroundColor: 'var(--bg)' }}>
+        <div className="container">
+          <div className="portfolio-header" style={{ marginBottom: '40px' }}>
+            <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '36px', fontWeight: '900', textTransform: 'uppercase' }}>
+              Open Source &amp; npm Packages
+              <UnderlineDoodle />
+            </h2>
+            <p style={{ fontSize: '16px', color: 'var(--text)', opacity: 0.7, marginTop: '10px' }}>
+              Packages published on the npm registry — built for real developer workflows.
+            </p>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '28px' }}>
+
+            {/* sk-nodeexpress */}
+            {[
+              {
+                name: '🚀 sk-nodeexpress',
+                version: 'v1.0.0',
+                versionColor: 'var(--yellow)',
+                desc: 'An interactive, zero-config CLI generator that instantly scaffolds production-ready Node.js & TypeScript Express backend apps — with JWT auth, CORS, Helmet, rate limiting & DB setup out of the box.',
+                tags: ['Node.js', 'JavaScript', 'TypeScript', 'Express.js', 'CLI', 'JWT', 'CORS'],
+                install: 'npx sk-nodeexpress',
+                npmLink: 'https://www.npmjs.com/package/sk-nodeexpress',
+                githubLink: 'https://github.com/kumarshobhit-1/sk-nodeexpress'
+              },
+              {
+                name: '💬 quotes-sk',
+                version: 'v4.0.2',
+                versionColor: 'var(--blue)',
+                desc: 'A lightweight npm package providing 300+ handpicked quotes — motivational, programming, and jokes — via random access. Perfect for CLI tools, websites, bots, or daily inspiration apps.',
+                tags: ['Node.js', 'JavaScript', 'CLI', '300+ Quotes', 'Zero Dependencies'],
+                install: 'npm install quotes-sk',
+                npmLink: 'https://www.npmjs.com/package/quotes-sk',
+                githubLink: 'https://github.com/kumarshobhit-1/quotes-sk'
+              }
+            ].map((pkg, i) => (
+              <div key={i} style={{
+                border: 'var(--border-width) solid var(--border)',
+                borderRadius: '4px',
+                padding: '28px',
+                boxShadow: '5px 5px 0 var(--border)',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '16px',
+                backgroundColor: 'var(--bg)'
+              }}>
+                {/* Badges */}
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
+                  <span style={{ backgroundColor: '#cc3534', color: '#fff', fontFamily: 'var(--font-mono)', fontSize: '11px', fontWeight: '700', padding: '3px 10px', borderRadius: '3px' }}>npm</span>
+                  <span style={{ backgroundColor: pkg.versionColor, border: 'var(--border-width) solid var(--border)', fontFamily: 'var(--font-mono)', fontSize: '11px', fontWeight: '700', padding: '3px 10px', borderRadius: '3px' }}>{pkg.version}</span>
+                  <span style={{ backgroundColor: 'var(--mint)', border: 'var(--border-width) solid var(--border)', fontFamily: 'var(--font-mono)', fontSize: '11px', fontWeight: '700', padding: '3px 10px', borderRadius: '3px' }}>MIT</span>
+                </div>
+                {/* Name + desc */}
+                <div>
+                  <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '22px', fontWeight: '900', marginBottom: '8px' }}>{pkg.name}</h3>
+                  <p style={{ fontSize: '14px', opacity: 0.8, lineHeight: '1.6' }}>{pkg.desc}</p>
+                </div>
+                {/* Tags */}
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
+                  {pkg.tags.map(t => <span key={t} className="tech-tag" style={{ fontSize: '11px', padding: '3px 8px' }}>{t}</span>)}
+                </div>
+                {/* Install */}
+                <div style={{ backgroundColor: '#0d1117', borderRadius: '4px', border: 'var(--border-width) solid var(--border)', padding: '12px 16px', fontFamily: 'var(--font-mono)', fontSize: '13px', color: '#50fa7b', display: 'flex', gap: '8px', alignItems: 'center', justifyContent: 'space-between' }}>
+                  <span style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+                    <span style={{ color: '#6272a4' }}>$</span> {pkg.install}
+                  </span>
+                  <button
+                    onClick={() => {
+                      navigator.clipboard.writeText(pkg.install);
+                      setCopiedPkgIdx(i);
+                      setTimeout(() => setCopiedPkgIdx(null), 2000);
+                    }}
+                    title={copiedPkgIdx === i ? 'Copied!' : 'Copy to clipboard'}
+                    style={{ background: 'none', border: 'none', cursor: 'pointer', color: copiedPkgIdx === i ? '#50fa7b' : '#6272a4', padding: '2px', display: 'flex', alignItems: 'center', transition: 'color 0.2s', flexShrink: 0 }}
+                  >
+                    {copiedPkgIdx === i ? (
+                      /* Checkmark icon */
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                    ) : (
+                      /* Clipboard icon (same as npm.js) */
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <rect x="9" y="2" width="13" height="13" rx="2" ry="2" />
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                      </svg>
+                    )}
+                  </button>
+                </div>
+                {/* Links */}
+                <div style={{ display: 'flex', gap: '10px', marginTop: 'auto' }}>
+                  {[
+                    { href: pkg.npmLink, label: 'npm', bg: '#cc3534', color: '#fff' },
+                    { href: pkg.githubLink, label: 'GitHub', bg: 'var(--mint)', color: '#08060D' }
+                  ].map(btn => (
+                    <a key={btn.label} href={btn.href} target="_blank" rel="noopener noreferrer"
+                      style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', backgroundColor: btn.bg, color: btn.color, border: 'var(--border-width) solid var(--border)', borderRadius: '4px', padding: '8px 16px', fontSize: '13px', fontWeight: '700', fontFamily: 'var(--font-heading)', boxShadow: '3px 3px 0 var(--border)', textDecoration: 'none', transition: 'transform 0.15s, box-shadow 0.15s' }}
+                      onMouseEnter={e => { e.currentTarget.style.transform = 'translate(-2px,-2px)'; e.currentTarget.style.boxShadow = '5px 5px 0 var(--border)'; }}
+                      onMouseLeave={e => { e.currentTarget.style.transform = 'translate(0,0)'; e.currentTarget.style.boxShadow = '3px 3px 0 var(--border)'; }}
+                    >{btn.label}</a>
+                  ))}
+                </div>
+              </div>
+            ))}
+
           </div>
         </div>
       </section>
