@@ -1950,7 +1950,7 @@ ${formData.message}
             {[
               {
                 name: '🚀 sk-nodeexpress',
-                version: 'v1.0.0',
+                version: 'v1.1.0',
                 versionColor: 'var(--yellow)',
                 desc: 'An interactive, zero-config CLI generator that instantly scaffolds production-ready Node.js & TypeScript Express backend apps — with JWT auth, CORS, Helmet, rate limiting & DB setup out of the box.',
                 tags: ['Node.js', 'JavaScript', 'TypeScript', 'Express.js', 'CLI', 'JWT', 'CORS'],
